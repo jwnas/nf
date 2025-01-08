@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissão de NFS-e</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Emissão de NFS-e</h1>
+        </header>
+        <section id="form-section">
+            <form id="notaFiscalForm">
+                <fieldset>
+                    <legend>Dados da Venda</legend>
+                    <label for="valorVenda">Valor da Venda:</label>
+                    <input type="number" id="valorVenda" step="0.01" required>
+
+                    <label for="itens">Itens Vendidos:</label>
+                    <input type="text" id="itens" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Porcentagens dos Impostos</legend>
+                    <label for="irpf">IRPF:</label>
+                    <input type="number" id="irpf" step="0.01" required>
+
+                    <label for="pis">PIS:</label>
+                    <input type="number" id="pis" step="0.01" required>
+
+                    <label for="cofins">COFINS:</label>
+                    <input type="number" id="cofins" step="0.01" required>
+
+                    <label for="inss">INSS:</label>
+                    <input type="number" id="inss" step="0.01" required>
+
+                    <label for="issqn">ISSQN:</label>
+                    <input type="number" id="issqn" step="0.01" required>
+                </fieldset>
+                <button type="button" onclick="gerarNotaFiscal()">Gerar Nota Fiscal</button>
+            </form>
+        </section>
+        <section id="invoice-section">
+            <article id="notaFiscal"></article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
